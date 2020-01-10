@@ -1,0 +1,316 @@
+MAP
+
+NAME Seismic-Map-Peru
+SIZE 500 600
+EXTENT -83 -20 -66 1.19528
+FONTSET fonts.list
+
+  IMAGECOLOR 255 255 255
+  IMAGEQUALITY 95
+  IMAGETYPE png
+
+  OUTPUTFORMAT
+    NAME png
+    DRIVER 'GD/PNG'
+    MIMETYPE 'image/png'
+    IMAGEMODE RGBA
+    EXTENSION 'png'
+  END
+
+
+WEB
+  IMAGEPATH "/data/paginasweb/ultimosismo/tmp/"
+  IMAGEURL "tmp/"
+  
+	METADATA
+	  WMS_TITLE "Seimic-Map-Peru"
+	  WMS_ABSTRACT "Seismic-Map-Peru"
+	  WMS_ACCESSCONSTRAINTS "none"
+	  WMS_ONLINERESOURCE "http://www.igp.gob.pe/cgi-bin/mapserv?map=/data/paginasweb/ultimosismo/map/sismos.map&"
+	  WMS_SRS "EPSG:4326"
+	  wms_enable_request "*" 
+	END  
+  
+END
+PROJECTION
+	"init=epsg:4326"  
+END
+
+
+LAYER
+  NAME "FondoPeru"
+  DATA "fondoPeru.tif"
+  TYPE RASTER
+  STATUS ON
+  TRANSPARENCY 100
+END 
+
+
+SYMBOL
+  NAME "circle"
+  TYPE ELLIPSE
+  FILLED TRUE
+  POINTS
+    1 1
+  END
+END
+
+LAYER
+  NAME "Capital_de_Departamento"
+  STATUS ON
+  DATA "Capital_de_Departamento"
+   
+	METADATA
+		WMS_TITLE "capitales"
+		WMS_SRS "EPSG:4326"  	
+	END
+	PROJECTION
+		"init=epsg:4326"  
+	END
+  TYPE POINT
+  LABELITEM    "NOM_CCPP"
+  
+  CLASS
+    NAME "UD"
+    STYLE
+      COLOR 255 255 255
+      SYMBOL "circle"
+      SIZE 6
+      OUTLINECOLOR 0 0 0
+    END
+
+    LABEL
+        FONT "DejaVuSans"
+		TYPE TRUETYPE
+        OUTLINECOLOR 255 255 255
+        COLOR 0 0 0
+        SIZE 7
+        FORCE TRUE
+        ANTIALIAS TRUE
+        POSITION AUTO
+        PARTIALS FALSE
+        #MINDISTANCE 300
+        BUFFER 0
+        
+    END    
+    
+  END
+END
+
+LAYER
+  NAME "Sudamerica"
+	METADATA
+		WMS_TITLE "sudamerica"
+		WMS_SRS "EPSG:4326"  	
+	END
+	PROJECTION
+		"init=epsg:4326"  
+	END  
+  STATUS ON
+  DATA "Sudamerica_Final"
+  TYPE POLYGON
+  CLASS
+    STYLE
+      OUTLINECOLOR 255 255 255
+    END
+  END
+END
+
+
+
+LAYER
+  NAME "Tacna"
+  STATUS ON
+  TYPE annotation
+  
+  FEATURE
+    POINTS
+      -70 -18.2
+    END
+    TEXT "Tacna"
+  END
+  
+  CLASS
+    LABEL
+      POSITION LC
+      FONT "DejaVuSans"
+      TYPE TRUETYPE
+      SIZE 7
+      BUFFER 1
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      FORCE TRUE
+    END
+    
+    STYLE
+      COLOR 255 255 255
+      SYMBOL "circle"
+      SIZE 6
+      OUTLINECOLOR 0 0 0
+    END    
+    
+  END
+  UNITS PIXELS
+END
+
+
+LAYER
+  NAME "ECUADOR"
+  STATUS ON
+  TYPE annotation
+  
+  FEATURE
+    POINTS
+      -78 -1
+    END
+    TEXT ECUADOR
+  END
+  
+  CLASS
+    LABEL
+      FONT "DejaVuSans-Bold"
+      TYPE TRUETYPE
+      SIZE 10
+      BUFFER 1
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      FORCE TRUE
+    END
+  END
+  UNITS PIXELS
+END
+
+LAYER
+  NAME "COLOMBIA"
+  STATUS ON
+  TYPE annotation
+  
+  FEATURE
+    POINTS
+      -73 0.5
+    END
+    TEXT COLOMBIA
+  END
+  
+  CLASS
+    LABEL
+      FONT "DejaVuSans-Bold"
+      TYPE TRUETYPE
+      SIZE 10
+      BUFFER 1
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      FORCE TRUE
+    END
+  END
+  UNITS PIXELS
+END
+
+LAYER
+  NAME "BRASIL"
+  STATUS ON
+  TYPE annotation
+  
+  FEATURE
+    POINTS
+      -70 -8
+    END
+    TEXT BRASIL
+  END
+  
+  CLASS
+    LABEL
+      FONT "DejaVuSans-Bold"
+      TYPE TRUETYPE
+      SIZE 10
+      BUFFER 1
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      FORCE TRUE
+    END
+  END
+  UNITS PIXELS
+END
+
+LAYER
+  NAME "BOLIVIA"
+  STATUS ON
+  TYPE annotation
+  
+  FEATURE
+    POINTS
+      -67 -15
+    END
+    TEXT BOLIVIA
+  END
+  
+  CLASS
+    LABEL
+      FONT "DejaVuSans-Bold"
+      TYPE TRUETYPE
+      SIZE 10
+      BUFFER 1
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      FORCE TRUE
+    END
+  END
+  UNITS PIXELS
+END
+
+
+
+LAYER
+  NAME "CHILE"
+  STATUS ON
+  TYPE annotation
+  
+  FEATURE
+    POINTS
+      -69 -20
+    END
+    TEXT CHILE
+  END
+  
+  CLASS
+    LABEL
+      FONT "DejaVuSans-Bold"
+      TYPE TRUETYPE
+      SIZE 10
+      BUFFER 1
+      COLOR 0 0 0
+      OUTLINECOLOR 255 255 255
+      FORCE TRUE
+    END
+
+  END
+  UNITS PIXELS
+END
+
+LAYER
+  NAME "PERU"
+  STATUS ON
+  TYPE annotation
+  
+  FEATURE
+    POINTS
+      -75 -9.4
+    END
+    TEXT PERU
+  END
+  
+  CLASS
+    LABEL
+      FONT "DejaVuSans-Bold"
+      TYPE TRUETYPE
+      SIZE 10
+      BUFFER 1
+      COLOR 186 0 0
+      OUTLINECOLOR 255 255 255
+      FORCE TRUE
+    END
+  END
+  UNITS PIXELS
+END
+
+END 

@@ -1,0 +1,160 @@
+MAP
+
+NAME Seismic-Map-Peru
+SIZE 500 600
+EXTENT -83 -20 -66 1.19528
+FONTSET fonts.list
+
+  IMAGECOLOR 255 255 255
+  IMAGEQUALITY 95
+  IMAGETYPE png
+
+  OUTPUTFORMAT
+    NAME png
+    DRIVER 'GD/PNG'
+    MIMETYPE 'image/png'
+    IMAGEMODE RGBA
+    EXTENSION 'png'
+  END
+
+
+WEB
+  IMAGEPATH "/data/paginasweb/ultimosismo/tmp/"
+  IMAGEURL "tmp/"
+  
+	METADATA
+	  WMS_TITLE "Seimic-Map-Peru"
+	  WMS_ABSTRACT "Seismic-Map-Peru"
+	  WMS_ACCESSCONSTRAINTS "none"
+	  WMS_ONLINERESOURCE "http://www.igp.gob.pe/cgi-bin/mapserv.fcgi?map=/data/paginasweb/ultimosismo/map/sismosDetalle.map&"
+	  WMS_SRS "EPSG:4326"
+	  wms_enable_request "*" 
+	END  
+  
+END
+PROJECTION
+	"init=epsg:4326"  
+END
+
+
+SYMBOL
+  NAME "triangle"
+  TYPE vector
+  POINTS
+    0 4
+    2 0
+    4 4
+    0 4
+  END
+END
+
+LAYER
+  NAME "Sudamerica"
+	METADATA
+		WMS_TITLE "sudamerica"
+		WMS_SRS "EPSG:4326"  	
+	END
+	PROJECTION
+		"init=epsg:4326"  
+	END  
+  STATUS ON
+  DATA "Sudamerica_Final"
+  TYPE POLYGON
+  CLASS
+    STYLE
+      OUTLINECOLOR 255 255 255
+    END
+  END
+END
+
+LAYER
+  NAME "Departamentos"
+	METADATA
+		WMS_TITLE "departamentos"
+		WMS_SRS "EPSG:4326"  	
+	END
+	PROJECTION
+		"init=epsg:4326"  
+	END
+  
+  STATUS ON
+  DATA "Departamentos"
+  TYPE POLYGON
+  CLASS
+    STYLE
+      #OPACITY 20
+      COLOR 244 243 240
+      OUTLINECOLOR 117 109 101
+    END
+  END
+END
+
+
+LAYER
+  NAME "Oceano"
+	METADATA
+		WMS_TITLE "pacifico"
+		WMS_SRS "EPSG:4326"  	
+	END
+	PROJECTION
+		"init=epsg:4326"  
+	END
+  STATUS ON
+  DATA "Oceano_Sur_America"
+  TYPE POLYGON
+  CLASS
+    STYLE
+      COLOR 165 191 221
+      OUTLINECOLOR 165 191 221
+    END
+  END
+END
+
+
+LAYER
+  NAME "Localidades_IGP"
+  STATUS ON
+  DATA "Localidades_IGP"
+   
+	METADATA
+		WMS_TITLE "localidades"
+		WMS_SRS "EPSG:4326"  	
+	END
+	PROJECTION
+		"init=epsg:4326"  
+	END
+  TYPE POINT
+  LABELITEM    "Localidad"
+  
+  CLASS
+    NAME "UD"
+    STYLE
+      COLOR 0 0 0
+      SYMBOL "triangle"
+      SIZE 4
+
+    END
+
+    
+    LABEL
+        FONT "DejaVuSans"
+		TYPE TRUETYPE
+        OUTLINECOLOR 255 255 255
+        COLOR 0 0 0
+        SIZE 8
+        #FORCE TRUE
+        ANTIALIAS TRUE
+        POSITION AUTO
+        #MAXOVERLAPANGLE 1
+        PARTIALS FALSE
+        #MINDISTANCE 300
+        BUFFER 0
+        
+    END    
+    
+  END
+END
+
+
+
+END 

@@ -1,0 +1,221 @@
+MAP
+
+NAME Seismic-Map-Peru
+SIZE 680 750
+EXTENT -85 -19 -65 2
+FONTSET fonts.list
+
+OUTPUTFORMAT
+  NAME "png"
+  DRIVER AGG/PNG
+  MIMETYPE "image/png"
+  IMAGEMODE RGB
+  EXTENSION "png"
+  FORMATOPTION "GAMMA=0.75"
+END
+
+
+WEB
+  IMAGEPATH "/data/paginasweb/bdsismos/tmp/"
+  IMAGEURL "tmp/"
+END
+
+LAYER
+  NAME "Sudamerica"
+  
+  STATUS ON
+  DATA "Sudamerica_Final"
+  TYPE POLYGON
+  CLASS
+    STYLE
+      COLOR 255 255 255
+      OUTLINECOLOR 0 0 0
+    END
+  END
+END
+
+LAYER
+  NAME "Oceano"
+  
+  STATUS ON
+  DATA "Oceano"
+  TYPE POLYGON
+  CLASS
+    STYLE
+      COLOR 0 170 255
+      OUTLINECOLOR 0 0 0
+    END
+  END
+END
+
+LAYER
+  NAME "Lagos_Principales"
+  
+  STATUS ON
+  DATA "Lagos_Principales"
+  TYPE POLYGON
+  CLASS
+    STYLE
+      COLOR 0 170 255
+      OUTLINECOLOR 0 0 0
+    END
+  END
+END
+
+LAYER
+  NAME "Departamentos"
+  
+  STATUS ON
+  DATA "Departamentos"
+  TYPE POLYGON
+  CLASS
+    STYLE
+      OPACITY 50
+      OUTLINECOLOR 0 0 0
+    END
+  END
+END
+
+LAYER
+  NAME "Fosa"
+  
+  STATUS ON
+  DATA "Fosa_linea"
+  TYPE LINE
+  CLASS
+    STYLE
+      COLOR 255 255 255
+      OUTLINECOLOR 0 0 0
+    END
+  END
+END
+
+LAYER
+  NAME "Dorsal"
+  
+  STATUS ON
+  DATA "Dorsal_de_Nazca"
+  TYPE LINE
+  CLASS
+    STYLE
+      COLOR 255 255 255
+      OUTLINECOLOR 0 0 0
+    END
+  END
+END
+
+LAYER
+  NAME "Mendaña"
+  
+  STATUS ON
+  DATA "Mendaña"
+  TYPE LINE
+  CLASS
+    STYLE
+      COLOR 255 255 255
+      OUTLINECOLOR 0 0 0
+    END
+  END
+END
+
+
+
+SYMBOL
+  NAME "triangle"
+  TYPE vector
+  FILLED TRUE  
+  POINTS
+    0 4
+    2 0
+    4 4
+    0 4
+  END
+END
+
+SYMBOL
+  NAME "circle"
+  TYPE ELLIPSE
+  FILLED TRUE
+  POINTS
+    1 1
+  END
+END
+
+LAYER
+  NAME "Capital_de_Departamento"
+  STATUS ON
+  DATA "Capital_de_Departamento"
+  TYPE POINT
+  LABELITEM    "NOM_CCPP"
+  
+  CLASS
+    NAME "UD"
+    STYLE
+      COLOR 255 255 255
+      SYMBOL "circle"
+      SIZE 6
+      OUTLINECOLOR 0 0 0
+    END
+
+    
+    LABEL
+        FONT "DejaVuSans"
+	TYPE TRUETYPE
+        COLOR 0 0 0
+        #OUTLINECOLOR 255 255 255
+        SIZE 6
+        FORCE true
+        #ANTIALIAS TRUE
+        POSITION AUTO
+        #MAXOVERLAPANGLE 1
+        #PARTIALS TRUE
+        #MINDISTANCE 300
+        #BUFFER 0
+        
+        # create a background shadow
+        #STYLE    # since to version 6
+        #  GEOMTRANSFORM 'labelpoly'
+        #  COLOR 218 218 218
+        #  OFFSET 2 2
+        #END # STYLE
+        
+        
+        
+    END    
+    
+  END
+END
+
+
+
+#LAYER
+#  NAME "copyright"
+#  STATUS ON
+#  TYPE annotation
+#  TRANSFORM ll #set the image origin to be lower left
+#  FEATURE
+#    POINTS
+#      80 -10 #set the offset from lower left position in pixels
+#    END
+#    TEXT "© Instituto Geofísico del Perú" #this is your displaying text
+#  END
+#  CLASS
+#    LABEL #defines the font, colors etc. of the text
+#      FONT "ubuntu"
+#      TYPE TRUETYPE
+#      SIZE 8
+#      BUFFER 1
+#      COLOR 0 0 0
+#      # BACKGROUNDCOLOR 255 255 255 # old way
+#      FORCE TRUE
+#      STYLE # new in mapserver 6
+#        GEOMTRANSFORM 'labelpoly'
+#        COLOR 255 255 255
+#      END # STYLE
+#    END
+#  END
+#  UNITS PIXELS #sets the units for the feature object
+#END
+
+
+END 

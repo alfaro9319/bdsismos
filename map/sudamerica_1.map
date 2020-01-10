@@ -1,0 +1,490 @@
+MAP
+
+NAME Seismic-Map-Peru
+SIZE 680 600
+EXTENT -83 -20 -63.114 1.19528
+FONTSET fonts.list
+
+OUTPUTFORMAT
+  NAME "png"
+  DRIVER AGG/PNG
+  MIMETYPE "image/png"
+  IMAGEMODE RGB
+  EXTENSION "png"
+  FORMATOPTION "GAMMA=0.75"
+END
+
+
+WEB
+  IMAGEPATH "/data/paginasweb/bdsismos/tmp/"
+  IMAGEURL "tmp/"
+END
+
+LAYER
+  NAME "FondoPeru"
+  DATA "fondo_peru.tif"
+  TYPE RASTER
+  STATUS ON
+  
+  CLASSITEM "[pixel]"
+  # class using simple string comparison, equivelent to ([pixel] = 0)
+  CLASS
+    EXPRESSION "0"
+    STYLE
+      COLOR 0 0 0
+    END
+  END
+  # class using an EXPRESSION using only [pixel].
+  CLASS
+    EXPRESSION ([pixel] < -481.206349)
+    STYLE
+      COLOR 255 255 255
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([pixel] >= -481.206349 AND [pixel] < -254.619048)
+    STYLE
+      COLOR 219 219 219
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([pixel] >= -254.619048 AND [pixel] < 28.031746)
+    STYLE       
+      COLOR 214 214 214
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([pixel] >= -28.031746 AND [pixel] < 198.555556)
+    STYLE       
+      COLOR 207 207 207
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([pixel] >= 198.555556 AND [pixel] < 425.142857)
+    STYLE       
+      COLOR 201 201 201
+    END
+  END
+  
+  CLASS     
+    EXPRESSION ([pixel] >= 425.142857 AND [pixel] < 651.730159)     
+    STYLE       
+      COLOR 196 196 196
+    END   
+  END  
+  
+  CLASS     
+    EXPRESSION ([pixel] >= 651.730159 AND [pixel] < 878.31746)
+    STYLE       
+      COLOR 191 191 191
+    END
+  END
+ 
+  CLASS
+    EXPRESSION ([pixel] >= 878.31746 AND [pixel] < 1104.904762)
+    STYLE       
+      COLOR 186 186 186
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([pixel] >= 1104.904762 AND [pixel] < 1331.492063)
+    STYLE       
+      COLOR 179 179 179
+    END
+  END
+  
+  CLASS     
+    EXPRESSION ([pixel] >= 1331.492063 AND [pixel] < 1558.079365)
+    STYLE       
+      COLOR 173 173 173
+    END
+  END
+  
+  CLASS     
+    EXPRESSION ([pixel] >= 1558.079365 AND [pixel] < 1784.666667)
+    STYLE       
+      COLOR 168 168 168
+    END
+  END
+  
+  CLASS     
+    EXPRESSION ([pixel] >= 1784.666667 AND [pixel] < 2011.253968)
+    STYLE       
+      COLOR 163 163 163
+    END
+  END
+  
+  CLASS     
+    EXPRESSION ([pixel] >= 2011.253968 AND [pixel] < 2237.84127)     
+    STYLE       
+      COLOR 158 158 158
+    END
+  END
+  
+  CLASS     
+    EXPRESSION ([pixel] >= 2237.84127 AND [pixel] < 2464.428571)     
+    STYLE       
+      COLOR 153 153 153
+    END
+  END
+  
+  CLASS     
+    EXPRESSION ([pixel] >= 2464.428571 AND [pixel] < 2691.015873)
+    STYLE       
+      COLOR 148 148 148
+    END
+  END
+  
+  CLASS     
+    EXPRESSION ([pixel] >= 2691.015873 AND [pixel] < 2917.603175)
+    STYLE       
+      COLOR 143 143 143
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([pixel] >= 2917.603175 AND [pixel] < 3144.190476)
+    STYLE       
+      COLOR 138 138 138
+    END
+  END
+  
+  CLASS     
+    EXPRESSION ([pixel] >= 3144.190476 AND [pixel] < 3370.777778)
+    STYLE       
+      COLOR 133 133 133
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([pixel] >= 3370.777778 AND [pixel] < 3597.365079)
+    STYLE
+      COLOR 128 128 128
+    END
+  END
+  
+  CLASS
+    EXPRESSION ([pixel] >= 3597.365079 AND [pixel] < 3823.952381)
+    STYLE       
+      COLOR 122 122 122
+    END
+  END  
+    
+  CLASS
+    EXPRESSION ([pixel] >= 3823.952381 AND [pixel] < 4050.539683)
+    STYLE       
+      COLOR 120 120 120
+    END
+  END  
+    
+  CLASS
+    EXPRESSION ([pixel] >= 4050.539683 AND [pixel] < 4277.126984)
+    STYLE       
+      COLOR 115 115 115
+    END
+  END  
+    
+  CLASS
+    EXPRESSION ([pixel] >= 4277.126984 AND [pixel] < 4503.714286)
+    STYLE       
+      COLOR 110 110 110 
+    END
+  END  
+    
+  CLASS
+    EXPRESSION ([pixel] >= 4503.714286 AND [pixel] < 4730.301587)
+    STYLE       
+      COLOR 105 105 105
+    END
+  END
+    
+  CLASS
+    EXPRESSION ([pixel] >= 4730.301587 AND [pixel] < 4956.888889)
+    STYLE       
+      COLOR 102 102 102
+    END
+  END  
+    
+  CLASS
+    EXPRESSION ([pixel] >= 4956.888889 AND [pixel] < 5183.47619)
+    STYLE
+      COLOR 97 97 97
+    END
+  END  
+    
+  CLASS
+    EXPRESSION ([pixel] >= 5183.47619 AND [pixel] < 5410.063492)
+    STYLE       
+      COLOR 92 92 92
+    END
+  END
+    
+  CLASS
+    EXPRESSION ([pixel] >= 5410.063492 AND [pixel] < 5636.650794)
+    STYLE       
+      COLOR 89 89 89
+    END
+  END  
+    
+  CLASS
+    EXPRESSION ([pixel] >= 5636.650794 AND [pixel] < 5863.238095)
+    STYLE       
+      COLOR 84 84 84
+    END
+  END
+    
+  CLASS
+    EXPRESSION ([pixel] >= 5863.238095 AND [pixel] < 6089.825397)
+    STYLE       
+      COLOR 82 82 82
+    END
+  END
+    
+  CLASS
+    EXPRESSION ([pixel] >= 6089.825397 AND [pixel] < 6316.412698)
+    STYLE       
+      COLOR 77 77 77
+    END
+  END  
+    
+  CLASS
+    EXPRESSION ([pixel] >= 6316.412698 AND [pixel] < 6543)
+    STYLE       
+      COLOR 71 71 71
+    END
+  END  
+    
+  CLASS
+    EXPRESSION ([pixel] >= 6543 AND [pixel])
+    STYLE
+      COLOR 69 69 69
+    END
+  END  
+
+  
+  
+  # class using the red/green/blue values from the palette
+  #CLASS
+  #  NAME "near white"
+  #  EXPRESSION ([red] > 200 AND [green] > 200 AND [blue] > 200)
+  #  STYLE
+  #    COLOR 0 255 0
+  #  END
+  #END
+  
+  # Class using a regular expression to capture only pixel values ending in 1
+  #CLASS
+  #  EXPRESSION /*1/
+  #  STYLE
+  #    COLOR 0 0 255
+  #  END
+  #END  
+  
+  
+END
+
+
+LAYER
+  NAME "Sudamerica"
+  
+  STATUS ON
+  DATA "Sudamerica_Final"
+  TYPE POLYGON
+  CLASS
+    STYLE
+      COLOR 255 255 255
+      OUTLINECOLOR 0 0 0
+    END
+  END
+END
+
+LAYER
+  NAME "Oceano"
+  
+  STATUS ON
+  DATA "Oceano"
+  TYPE POLYGON
+  CLASS
+    STYLE
+      COLOR 0 170 255
+      OUTLINECOLOR 0 0 0
+    END
+  END
+END
+
+LAYER
+  NAME "Lagos_Principales"
+  
+  STATUS ON
+  DATA "Lagos_Principales"
+  TYPE POLYGON
+  CLASS
+    STYLE
+      COLOR 0 170 255
+      OUTLINECOLOR 0 0 0
+    END
+  END
+END
+
+LAYER
+  NAME "Departamentos"
+  
+  STATUS ON
+  DATA "Departamentos"
+  TYPE POLYGON
+  CLASS
+    STYLE
+      OPACITY 50
+      OUTLINECOLOR 0 0 0
+    END
+  END
+END
+
+LAYER
+  NAME "Fosa"
+  
+  STATUS ON
+  DATA "Fosa_linea"
+  TYPE LINE
+  CLASS
+    STYLE
+      COLOR 255 255 255
+      OUTLINECOLOR 0 0 0
+    END
+  END
+END
+
+LAYER
+  NAME "Dorsal"
+  
+  STATUS ON
+  DATA "Dorsal_de_Nazca"
+  TYPE LINE
+  CLASS
+    STYLE
+      COLOR 255 255 255
+      OUTLINECOLOR 0 0 0
+    END
+  END
+END
+
+LAYER
+  NAME "Mendaña"
+  
+  STATUS ON
+  DATA "Mendaña"
+  TYPE LINE
+  CLASS
+    STYLE
+      COLOR 255 255 255
+      OUTLINECOLOR 0 0 0
+    END
+  END
+END
+
+
+
+SYMBOL
+  NAME "triangle"
+  TYPE vector
+  FILLED TRUE  
+  POINTS
+    0 4
+    2 0
+    4 4
+    0 4
+  END
+END
+
+SYMBOL
+  NAME "circle"
+  TYPE ELLIPSE
+  FILLED TRUE
+  POINTS
+    1 1
+  END
+END
+
+LAYER
+  NAME "Capital_de_Departamento"
+  STATUS ON
+  DATA "Capital_de_Departamento"
+  TYPE POINT
+  LABELITEM    "NOM_CCPP"
+  
+  CLASS
+    NAME "UD"
+    STYLE
+      COLOR 255 255 255
+      SYMBOL "circle"
+      SIZE 6
+      OUTLINECOLOR 0 0 0
+    END
+
+    
+    LABEL
+        FONT "DejaVuSans"
+	TYPE TRUETYPE
+        COLOR 0 0 0
+        #OUTLINECOLOR 255 255 255
+        SIZE 6
+        FORCE true
+        #ANTIALIAS TRUE
+        POSITION AUTO
+        #MAXOVERLAPANGLE 1
+        #PARTIALS TRUE
+        #MINDISTANCE 300
+        #BUFFER 0
+        
+        # create a background shadow
+        #STYLE    # since to version 6
+        #  GEOMTRANSFORM 'labelpoly'
+        #  COLOR 218 218 218
+        #  OFFSET 2 2
+        #END # STYLE
+        
+        
+        
+    END    
+    
+  END
+END
+
+
+
+#LAYER
+#  NAME "copyright"
+#  STATUS ON
+#  TYPE annotation
+#  TRANSFORM ll #set the image origin to be lower left
+#  FEATURE
+#    POINTS
+#      80 -10 #set the offset from lower left position in pixels
+#    END
+#    TEXT "© Instituto Geofísico del Perú" #this is your displaying text
+#  END
+#  CLASS
+#    LABEL #defines the font, colors etc. of the text
+#      FONT "ubuntu"
+#      TYPE TRUETYPE
+#      SIZE 8
+#      BUFFER 1
+#      COLOR 0 0 0
+#      # BACKGROUNDCOLOR 255 255 255 # old way
+#      FORCE TRUE
+#      STYLE # new in mapserver 6
+#        GEOMTRANSFORM 'labelpoly'
+#        COLOR 255 255 255
+#      END # STYLE
+#    END
+#  END
+#  UNITS PIXELS #sets the units for the feature object
+#END
+
+
+END 

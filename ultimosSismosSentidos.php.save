@@ -1,0 +1,672 @@
+<?php
+
+    require ('class/ClassPaginatorSismos.php');
+    require ('class/dbconnect.php');
+    require ('class/xajax_core/xajax.inc.php');
+    require("sismosSentidosModel.php");
+
+    require_once 'http-client/index.php';
+
+    $xajax=new xajax();	
+    $xajax->configure('javascript URI', 'class/');
+    date_default_timezone_set('America/Lima');
+    
+	
+ 	function aux($pageSize,$currentPage,$form){
+ 		
+ 		
+ 		$objResponse = new xajaxResponse();
+ 		
+ 		if (count($form)<>0){
+ 			$tabla=tablaSismos($pageSize,$currentPage,$form);
+ 			$objResponse->assign("tablaResultados", "innerHTML",$tabla);
+ 			//$objResponse->alert(print_r($form,TRUE));
+ 			$paginador=paginadorSismos($pageSize,$currentPage,$form);
+ 			$objResponse->assign("paginator", "innerHTML", $paginador); 			
+ 		}
+ 		else{
+ 			$objResponse->assign("tablaResultados", "innerHTML","");
+ 			$objResponse->assign("paginator", "innerHTML", "");
+ 		}
+		return $objResponse; 		
+ 	}
+
+ 	
+ 	function auxIni($pageSize,$currentPage){
+ 		$objResponse = new xajaxResponse();
+ 		
+ 		$html='<table class="ui table"><tbody>';
+ 		$arrayMeses = array("","Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Setiembre","Octubre","Noviembre","Diciembre",);
+ 		
+ 		$result=listMonth();
+
+ 		for($i=0; $i<$result["Count"]; $i++){
+ 			$html.="<tr class='mes'>";
+ 			$html.="<td>".$arrayMeses[$result["mes"][$i]]."</td>";
+ 			$html.="<td>(".$result["cantidad"][$i].")</td>";
+ 			$html.="<td><input type='checkbox' onclick=\"xajax_aux($pageSize,$currentPage,xajax.getFormValues('formMonth'))\" checked='true' id='optionMonth".$i."' name='optionMonth".$i."' value='".$result["mes"][$i]."'></td>";
+ 			$html.="</div>";
+ 		}
+ 		$html.="</tbody></table>";
+ 			
+ 		$objResponse->assign("meses", "innerHTML",$html);
+ 		
+ 		$tabla=tablaSismos($pageSize,$currentPage,"");
+ 		$objResponse->assign("tablaResultados", "innerHTML",$tabla);
+ 		$paginador=paginadorSismos($pageSize,$currentPage,"xajax.getFormValues('formMonth')"); 		 		
+ 		$objResponse->assign("paginator", "innerHTML",$paginador);
+ 		
+ 		return $objResponse;
+ 	}
+ 	
+ 
+ 	function tablaSismos($pageSize,$currentPage,$form){
+ 		$valuesMonth="";
+ 		// El resultado debe ser solo de la pagina a mostrar
+		if ($form==""){
+ 			$result=readListSismos("Limit",$pageSize,$currentPage);
+		}
+ 		elseif(is_array($form)){
+ 			// Verificamos que meses tienen valor
+ 			for($i=0; $i<12; $i++){
+ 				if (isset($form["optionMonth$i"])){
+ 					$valuesMonth.=$form["optionMonth$i"].",";
+ 				}
+ 			}
+ 			// Le quitamos la ultima coma
+ 			$valuesMonth=substr_replace($valuesMonth,'',strripos($valuesMonth,","),1);
+ 			$result=readListSismos("FilterMonthLimit",$pageSize,$currentPage,$valuesMonth);
+ 		} 	
+ 		//<th colspan="2">Intensidad</th>	
+ 		$html='<table class="ui table collapsing striped"><thead>
+ 		<tr valign="top">
+		
+		<th>Fecha Local</th>
+ 		<th>Hora Local</th>
+ 		<th>Latitud°</th>
+ 		<th>Longitud°</th>
+ 		<th>Profundidad</th>
+ 		<th>Magnitud</th>
+ 		<th>Referencia</th>
+ 		<th>Intensidad</th>
+ 		<th>Mapas tem&aacute;ticos</th>
+ 		<th>Bolet&iacute;n</th>
+		</tr></thead><tbody>
+ 		';
+		$n=$result["Count"];
+ 		for($i=0; $i<$n; $i++){
+ 			$html.="<tr>";
+ 			//$html.="<td>".$result["numero_reporte"][$i]."</td>";
+ 			$html.="<td>".date("d/m/Y",strtotime($result["fecha_local"][$i]))."</td>";
+ 			$html.="<td>".substr($result["hora_local"][$i],0,5)."</td>";
+ 			$html.="<td>".$result["latitud"][$i]."</td>";
+ 			$html.="<td>".$result["longitud"][$i]."</td>";
+ 			$html.="<td>".$result["profundidad"][$i]." km</td>";
+ 			$html.="<td>".$result["magnitud"][$i]."</td>";
+ 			$html.="<td>".$result["referencia"][$i]."</td>";
+ 			$html.="<td>&nbsp;".((substr_count($result["intensidad"][$i],';')>0)?strstr($result["intensidad"][$i],';',true):$result["intensidad"][$i])."</td>";
+ 			/*$html.="<td>".(($result["anyMap"][$i]=="1")?"<img src='https://cdn2.iconfinder.com/data/icons/file-8/128/file_pdf_download-32.png'>":"")."</td>";*/
+ 			$html.="<td class='".$result["idlistasismos"][$i]."'>".
+(( !empty($result["mapa"][$i]))?"
+<a target='_blank' href='".http_client_download_file($result["idlistasismos"][$i].'/'.$result["mapa"][$i])."'><img style='height: 21px;' src='https://cdn2.iconfinder.com/data/icons/file-8/128/file_pdf_download-32.png'></a>":"")."</td>";
+ 			/*$html.="<td><a href='http://portal.igp.gob.pe/sites/default/files/images/documents/sismos/Boletines_sismicos_".date('Y/Y')."_".str_pad($result['numero_reporte'][$i],3,"0",STR_PAD_LEFT).".pdf' target='_blank'><img style='height: 20px;' src='https://cdn1.iconfinder.com/data/icons/hawcons/32/699327-icon-55-document-text-48.png'> </a>".(( !empty($result["informe"][$i]))?"<a target='_blank' href='".http_client_download_file($result["informe"][$i])."'><img style='height: 20px;' src='https://cdn1.iconfinder.com/data/icons/hawcons/32/699327-icon-55-document-text-48.png'></a>    ":"")."</td>";*/
+ 			$html.="<td>".((trim($result["intensidad"][$i])!="")?"
+<a href='http://portal.igp.gob.pe/sites/default/files/images/documents/sismos/Boletines_sismicos_".date('Y/').date('dmyHi',strtotime($result['fecha_local'][$i]." ".$result['hora_local'][$i])).".pdf' target='_blank'>
+<img style='height: 20px;' src='https://cdn1.iconfinder.com/data/icons/hawcons/32/699327-icon-55-document-text-48.png'></a>":"")."</td>";
+		        $html.="</tr>";
+
+ 		}
+ 		$html.="<tbody></table>";
+
+ 		return $html;
+ 	}
+ 	
+ 	
+ 	function paginadorSismos($pageSize, $currentPage,$parameter){
+
+ 		$valuesMonth="";
+ 		// El resultado debe ser el total de la consulta
+
+ 		if(is_array($parameter)){
+ 			// Verificamos que meses tienen valor
+ 			for($i=0; $i<12; $i++){
+ 				if (isset($parameter["optionMonth$i"])){
+ 					$valuesMonth.=$parameter["optionMonth$i"].",";
+ 				}
+ 			}
+ 			// Le quitamos la ultima coma
+ 			$valuesMonth=substr_replace($valuesMonth,'',strripos($valuesMonth,","),1);
+ 			
+ 			$result=readListSismos("FilterMonth",$pageSize,$currentPage,$valuesMonth);
+ 		}
+ 		else{
+ 			$result=readListSismos("All",$pageSize, $currentPage);
+ 		} 		
+ 		$total=$result["Count"];
+ 		$pagHtml=paginatorConstruct($currentPage,$pageSize,$total);
+
+ 		return $pagHtml;
+ 	}
+ 	
+
+        
+
+
+	function tabla(){
+
+		$objResponse = new xajaxResponse();
+			
+		$html='<table cellspacing="0" cellpadding="0" border="0" align="center" class="ui table tablalateral">';
+		$arrayMeses = array("","Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Setiembre","Octubre","Noviembre","Diciembre",);
+			
+		$result=listMonth();
+	
+		for($i=0; $i<$result["Count"]; $i++){
+			$html.="<tr class='mes'>";
+			$html.="<td>".$arrayMeses[$result["mes"][$i]]."</td>";
+			$html.="<td>(".$result["cantidad"][$i].")</td>";
+			$html.="<td><input type='checkbox' onclick=\"showsismo".$arrayMeses[$result["mes"][$i]]."(this.checked)\" checked='true' id='optionMonth".$i."' name='optionMonth".$i."' value='".$result["mes"][$i]."'></td>";
+			$html.="</tr>";
+		}
+		$html.="</tabla>";
+	
+		$objResponse->assign("meses-mapa", "innerHTML",$html);
+		return $objResponse;
+	}
+
+		$result=readListSismos("All","","");
+		$arrayMeses = array("","Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Setiembre","Octubre","Noviembre","Diciembre",);		
+		
+		$grupoEneroCheck="";
+		$grupoEneroNoCheck="";
+		$grupoFebreroCheck="";
+		$grupoFebreroNoCheck="";
+		$grupoMarzoCheck="";
+		$grupoMarzoNoCheck="";
+		$grupoAbrilCheck="";
+		$grupoAbrilNoCheck="";
+		$grupoMayoCheck="";
+		$grupoMayoNoCheck="";
+		$grupoJunioCheck="";
+		$grupoJunioNoCheck="";
+		$grupoJulioCheck="";
+		$grupoJulioNoCheck="";
+		$grupoAgostoCheck="";
+		$grupoAgostoNoCheck="";
+		$grupoSetiembreCheck="";
+		$grupoSetiembreNoCheck="";
+		$grupoOctubreCheck="";
+		$grupoOctubreNoCheck="";
+		$grupoNoviembreCheck="";
+		$grupoNoviembreNoCheck="";
+		$grupoDiciembreCheck="";
+		$grupoDiciembreNoCheck="";
+		
+		
+		
+		for($i=0; $i<$result["Count"]; $i++){
+			$fechaLocal[$i] = $result["fecha_local"][$i];
+			$horaLocal[$i] = $result["hora_local"][$i];
+			$latitud[$i] = $result["latitud"][$i];
+			$longitud[$i] = $result["longitud"][$i];
+			$profundidad_valor[$i] = $result["profundidad"][$i];
+			$profundidad_unidad[$i] = "km";
+			$referencia[$i] = $result["referencia"][$i];
+			$magnitud_valor[$i] = $result["magnitud"][$i];
+			$magnitud_unidad[$i] = "";//ML
+			$intensidad[$i] = $result["intensidad"][$i];
+			list($year[$i],$month[$i],$day[$i])=explode("-", $fechaLocal[$i]);
+			if($i==0){
+                                $icono="ico_amarillo.png";
+                                $zindex=999;
+                        }
+                        else{
+                                $profundidad_valor[$i]=floatval($profundidad_valor[$i]);
+
+                                if($profundidad_valor[$i]<=60){
+                                        $icono="ico_rojo.png";
+                                }
+
+                                if($profundidad_valor[$i]>60 and $profundidad_valor[$i]<300){
+                                        $icono="ico_verde.png";
+                                }
+
+                                if($profundidad_valor[$i]>300){
+                                        $icono="ico_azul.png";
+                                }
+                                $zindex=999-$i;
+                        }
+
+
+                        $magnitud_valor[$i]=floatval($magnitud_valor[$i]);
+                        // Alto y Ancho de la imagen
+                        if($magnitud_valor[$i]>3 and $magnitud_valor[$i]<=4){
+                                $ancho=12;
+                                $alto=12;
+                        }
+
+                        if($magnitud_valor[$i]>4 and $magnitud_valor[$i]<=5){
+                                $ancho=16;
+                                $alto=16;
+                        }
+
+                        if($magnitud_valor[$i]>5 and $magnitud_valor[$i]<=6){
+                                $ancho=20;
+                                $alto=20;
+                        }
+
+                        if($magnitud_valor[$i]>6 and $magnitud_valor[$i]<=7){
+                                $ancho=24;
+                                $alto=24;
+                        }
+
+                        if($magnitud_valor[$i]>7 and $magnitud_valor[$i]<=9){
+                                $ancho=26;
+                                $alto=26;
+                        }
+                        if($magnitud_valor[$i]>9) {
+                                $ancho=28;
+                                $alto=28;
+                        }
+
+
+			
+			if ($month[$i]==1){
+				$grupoEneroCheck.="draw_event('$day[$i]/$month[$i]/$year[$i]', '$horaLocal[$i]', '$latitud[$i]', '$longitud[$i]', '$profundidad_valor[$i]', '$magnitud_valor[$i]','$icono','$ancho','$alto');";
+				$grupoEneroNoCheck.="markers_enero.clearLayers();";
+			}
+			if ($month[$i]==2){
+				$grupoFebreroCheck.="draw_event('$day[$i]/$month[$i]/$year[$i]', '$horaLocal[$i]', '$latitud[$i]', '$longitud[$i]', '$profundidad_valor[$i]', '$magnitud_valor[$i]','$icono','$ancho','$alto');";
+				$grupoFebreroNoCheck.="markers_febrero.clearLayers();";
+			}
+			if ($month[$i]==3){
+				$grupoMarzoCheck.="draw_event('$day[$i]/$month[$i]/$year[$i]', '$horaLocal[$i]', '$latitud[$i]', '$longitud[$i]', '$profundidad_valor[$i]', '$magnitud_valor[$i]','$icono','$ancho','$alto');";
+				$grupoMarzoNoCheck.="markers_marzo.clearLayers();";
+			}
+			if ($month[$i]==4){
+				$grupoAbrilCheck.="draw_event('$day[$i]/$month[$i]/$year[$i]', '$horaLocal[$i]', '$latitud[$i]', '$longitud[$i]', '$profundidad_valor[$i]', '$magnitud_valor[$i]','$icono','$ancho','$alto');";
+				$grupoAbrilNoCheck.="markers_abril.clearLayers();";
+			}
+			if ($month[$i]==5){
+				$grupoMayoCheck.="draw_event('$day[$i]/$month[$i]/$year[$i]', '$horaLocal[$i]', '$latitud[$i]', '$longitud[$i]', '$profundidad_valor[$i]', '$magnitud_valor[$i]','$icono','$ancho','$alto');";
+				$grupoMayoNoCheck.="markers_mayo.clearLayers();";
+			}
+			if ($month[$i]==6){
+				$grupoJunioCheck.="draw_event('$day[$i]/$month[$i]/$year[$i]', '$horaLocal[$i]', '$latitud[$i]', '$longitud[$i]', '$profundidad_valor[$i]', '$magnitud_valor[$i]','$icono','$ancho','$alto');";
+				$grupoJunioNoCheck.="markers_junio.clearLayers();";
+			}
+			if ($month[$i]==7){
+				$grupoJulioCheck.="draw_event('$day[$i]/$month[$i]/$year[$i]', '$horaLocal[$i]', '$latitud[$i]', '$longitud[$i]', '$profundidad_valor[$i]', '$magnitud_valor[$i]','$icono','$ancho','$alto');";
+				$grupoJulioNoCheck.="markers_julio.clearLayers();";
+			}
+			if ($month[$i]==8){
+				$grupoAgostoCheck.="draw_event('$day[$i]/$month[$i]/$year[$i]', '$horaLocal[$i]', '$latitud[$i]', '$longitud[$i]', '$profundidad_valor[$i]', '$magnitud_valor[$i]','$icono','$ancho','$alto');";
+				$grupoAgostoNoCheck.="markers_agosto.clearLayers();";
+			}
+			if ($month[$i]==9){
+				$grupoSetiembreCheck.="draw_event('$day[$i]/$month[$i]/$year[$i]', '$horaLocal[$i]', '$latitud[$i]', '$longitud[$i]', '$profundidad_valor[$i]', '$magnitud_valor[$i]','$icono','$ancho','$alto');";
+				$grupoSetiembreNoCheck.="markers_setiembre.clearLayers();";
+			}
+			if ($month[$i]==10){
+				$grupoOctubreCheck.="draw_event('$day[$i]/$month[$i]/$year[$i]', '$horaLocal[$i]', '$latitud[$i]', '$longitud[$i]', '$profundidad_valor[$i]', '$magnitud_valor[$i]','$icono','$ancho','$alto');";
+				$grupoOctubreNoCheck.="markers_octubre.clearLayers();";
+			}
+			if ($month[$i]==11){
+				$grupoNoviembreCheck.="draw_event('$day[$i]/$month[$i]/$year[$i]', '$horaLocal[$i]', '$latitud[$i]', '$longitud[$i]', '$profundidad_valor[$i]', '$magnitud_valor[$i]','$icono','$ancho','$alto');";
+				$grupoNoviembreNoCheck.="markers_noviembre.clearLayers();";
+			}
+			if ($month[$i]==12){
+				$grupoDiciembreCheck.="draw_event('$day[$i]/$month[$i]/$year[$i]', '$horaLocal[$i]', '$latitud[$i]', '$longitud[$i]', '$profundidad_valor[$i]', '$magnitud_valor[$i]','$icono','$ancho','$alto');";
+				$grupoDiciembreNoCheck.="markers_diciembre.clearLayers();";
+			}
+		}
+		
+		$showbymonth="
+		function showsismoEnero(checked){
+			if(checked){
+				$grupoEneroCheck
+			}
+			else{
+				$grupoEneroNoCheck
+			}
+		}
+		function showsismoFebrero(checked){
+			if(checked){
+				$grupoFebreroCheck
+			}
+			else{
+				$grupoFebreroNoCheck
+			}
+		}
+		function showsismoMarzo(checked){
+			if(checked){
+				$grupoMarzoCheck;
+			}
+			else{
+				$grupoMarzoNoCheck
+			}
+		}
+		function showsismoAbril(checked){
+			if(checked){
+				$grupoAbrilCheck
+			}
+			else{
+				$grupoAbrilNoCheck
+			}
+		}
+		function showsismoMayo(checked){
+			if(checked){
+				$grupoMayoCheck
+			}
+			else{
+				$grupoMayoNoCheck
+			}
+		}
+		function showsismoJunio(checked){
+			if(checked){
+				$grupoJunioCheck
+			}
+			else{
+				$grupoJunioNoCheck
+			}
+		}
+		function showsismoJulio(checked){
+			if(checked){
+				$grupoJulioCheck
+			}
+			else{
+				$grupoJulioNoCheck
+			}
+		}
+		function showsismoAgosto(checked){
+			if(checked){
+				$grupoAgostoCheck
+			}
+			else{
+				$grupoAgostoNoCheck
+			}
+		}
+		function showsismoSetiembre(checked){
+			if(checked){
+				$grupoSetiembreCheck
+			}
+			else{
+				$grupoSetiembreNoCheck
+			}
+		}
+		function showsismoOctubre(checked){
+			if(checked){
+				$grupoOctubreCheck
+			}
+			else{
+				$grupoOctubreNoCheck
+			}
+		}
+		function showsismoNoviembre(checked){
+			if(checked){
+				$grupoNoviembreCheck
+			}
+			else{
+				$grupoNoviembreNoCheck
+			}
+		}
+		function showsismoDiciembre(checked){
+			if(checked){
+				$grupoDiciembreCheck
+			}
+			else{
+				$grupoDiciembreNoCheck
+			}
+		}";		
+		
+		
+		
+		$script = "";
+		$data_openstreetmap = "";
+		for($i=0; $i<$result["Count"]; $i++):
+			//$reporteTxt=readReporteTxt1($i);
+		
+			//color segun la profundidad
+			if($i==0){
+				$icono="ico_amarillo.png";
+				$zindex=999;
+			}
+			else{
+				$profundidad_valor[$i]=floatval($profundidad_valor[$i]);
+				 
+				if($profundidad_valor[$i]<=60){
+					$icono="ico_rojo.png";
+				}
+		
+				if($profundidad_valor[$i]>60 and $profundidad_valor[$i]<300){
+					$icono="ico_verde.png";
+				}
+		
+				if($profundidad_valor[$i]>300){
+					$icono="ico_azul.png";
+				}
+				$zindex=999-$i;
+			}
+			
+		
+			$magnitud_valor[$i]=floatval($magnitud_valor[$i]);
+			// Alto y Ancho de la imagen
+			if($magnitud_valor[$i]>3 and $magnitud_valor[$i]<=4){
+				$ancho=12;
+				$alto=12;
+			}
+		
+			if($magnitud_valor[$i]>4 and $magnitud_valor[$i]<=5){
+				$ancho=16;
+				$alto=16;
+			}
+		
+			if($magnitud_valor[$i]>5 and $magnitud_valor[$i]<=6){
+				$ancho=20;
+				$alto=20;
+			}
+		
+			if($magnitud_valor[$i]>6 and $magnitud_valor[$i]<=7){
+				$ancho=24;
+				$alto=24;
+			}
+		
+			if($magnitud_valor[$i]>7 and $magnitud_valor[$i]<=9){
+				$ancho=26;
+				$alto=26;
+			}
+			if($magnitud_valor[$i]>9) {
+				$ancho=28;
+				$alto=28;
+			}
+		
+		
+		// Tener cuidado de no dejar espacios en blanco		
+//		'<tr><td style=\"padding:0px; font-weight:bold;\">Magnitud</td><td style=\"padding:0px; \">: '.$magnitud_valor[$i].' '.$magnitud_unidad[$i].'</td></tr>'.
+
+
+
+		/*$script.='
+			var markImage'.$i.' = new google.maps.MarkerImage("img/'.$icono.'", null, null, new google.maps.Point('.(float)($ancho/2).', '.(float)($alto/2).'), new google.maps.Size('.$ancho.','. $alto.'));
+			var location'.$i.' = new google.maps.LatLng('.floatval($latitud[$i]).','.floatval($longitud[$i]).');
+			var marker'.$i.' = new google.maps.Marker({
+			position: location'.$i.',
+			map: map,
+
+			icon: markImage'.$i.',
+			optimized: false,
+			zIndex:'.$zindex.'
+		});
+		markersArray['.$i.']=marker'.$i.';
+		var infowindow'.$i.' = new google.maps.InfoWindow(
+		{ content: "<table><tr><td style=\"padding:0px; font-weight:bold;\">Fecha Local</td><td style=\"padding:0px; \">: '.$day[$i]."/".$month[$i]."/".$year[$i].'</td></tr>'.
+		'<tr><td style=\"padding:0px; font-weight:bold;\">Hora Local</td><td style=\"padding:0px; \">: '.$horaLocal[$i] .'</td></tr>'.
+		'<tr><td style=\"padding:0px; font-weight:bold;\">Latitud</td><td style=\"padding:0px; \">: '.$latitud[$i].'</td></tr>'.  // Tener cuidado de no dejar espacios en blanco
+		'<tr><td style=\"padding:0px; font-weight:bold;\">Longitud</td><td style=\"padding:0px; \">: '.$longitud[$i].'</td></tr>'.
+		'<tr><td style=\"padding:0px; font-weight:bold;\">Profundidad</td><td style=\"padding:0px; \">: '.$profundidad_valor[$i].' '.$profundidad_unidad[$i].'</td></tr>'.
+		'<tr><td style=\"padding:0px; font-weight:bold;\">Magnitud</td><td style=\"padding:0px; \">: '.$magnitud_valor[$i].'</td></tr>'.
+		'</table>"
+		});
+		google.maps.event.addListener(markersArray['.$i.'], \'mouseover\', function() {
+		infowindow'.$i.'.open(map,markersArray['.$i.']);
+		});
+		google.maps.event.addListener(markersArray['.$i.'], \'mouseout\', function() {
+		infowindow'.$i.'.close(map,markersArray['.$i.']);
+		});
+		';*/
+		$data_openstreetmap.="draw_event('$day[$i]/$month[$i]/$year[$i]', '$horaLocal[$i]', '$latitud[$i]', '$longitud[$i]', '$profundidad_valor[$i]', '$magnitud_valor[$i]','$icono','$ancho','$alto');";
+	endfor;
+
+$script_openstreetmap="
+    var map;
+    var latitud
+    var longitud;
+    var attribution = '&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors';
+	var France = L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', { attribution : attribution }),
+		WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {attribution : attribution}),
+		Esri_DeLorme = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Specialty/DeLorme_World_Base_Map/MapServer/tile/{z}/{y}/{x}', {attribution : attribution}),
+		RoadsAndLabels = L.tileLayer('https://services.arcgisonline.com/arcgis/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', {attribution : attribution});
+	map = L.map('map', {
+		minZoom: 3,
+		maxZoom: 17,
+		center: [-12.0, -71.2],
+		zoom: 7,
+		layers: [WorldImagery,RoadsAndLabels],
+		fullscreenControl: true,
+		fullscreenControlOptions: { position: 'topleft' }
+	});
+
+	L.control.layers(
+		{ 'Satélite' : WorldImagery, 'Terreno' : France },
+		{ 'Delimitaciones' : RoadsAndLabels})
+	.addTo(map);
+
+   var  url = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/';
+
+    L.tileLayer(url+'{z}/{y}/{x}.png', {
+      attribution: attribution
+    }).addTo(map);
+
+    var markers_enero = new L.FeatureGroup();
+    var markers_febrero = new L.FeatureGroup();
+    var markers_marzo = new L.FeatureGroup();
+    var markers_abril = new L.FeatureGroup();
+    var markers_mayo = new L.FeatureGroup();
+    var markers_junio = new L.FeatureGroup();
+    var markers_julio = new L.FeatureGroup();
+    var markers_agosto = new L.FeatureGroup();
+    var markers_setiembre = new L.FeatureGroup();
+    var markers_octubre = new L.FeatureGroup();
+    var markers_noviembre = new L.FeatureGroup();
+    var markers_diciembre = new L.FeatureGroup();
+    map.addLayer(markers_enero);
+    map.addLayer(markers_febrero);
+    map.addLayer(markers_marzo);
+    map.addLayer(markers_abril);
+    map.addLayer(markers_mayo);
+    map.addLayer(markers_junio);
+    map.addLayer(markers_julio);
+    map.addLayer(markers_agosto);
+    map.addLayer(markers_setiembre);
+    map.addLayer(markers_octubre);
+    map.addLayer(markers_noviembre);
+    map.addLayer(markers_diciembre);
+//    map.panTo([-9.737, -73.923],3);//centrar el mapa
+//    map.panTo([40.737, 13.923]);//centrar el mapa
+   map.setView(new L.LatLng(-9.737,-73.923),5);
+
+
+      function draw_event(fecha_local, hora_local, latitud, longitud, profundidad, magnitud,icono,ancho, alto){
+	    var icon = L.icon({
+	        iconUrl: 'http://intranet.igp.gob.pe/bdsismos/img/'+icono,
+	        iconSize:     [ancho, alto], // size of the icon
+        	iconAnchor:   [4, 4], // point of the icon which will correspond to marker's location
+	    });
+	mes = parseFloat(fecha_local.substr(3,2))
+//        map.setView(new L.LatLng(latitud,longitud),5);
+	
+	switch(mes){
+	case 1:
+          L.marker([latitud,longitud],{icon:icon})
+          .bindPopup('Fecha Local: '+fecha_local+'<br>Hora Local: '+hora_local+'<br>latitud: '+latitud+'<br>longitud: '+longitud+'<br>Profundidad:'+profundidad+'<br>Magnitud:'+magnitud)
+          .openPopup()
+	  .addTo(markers_enero);
+	break;
+
+	case 2:
+          L.marker([latitud,longitud],{icon:icon})
+          .bindPopup('Fecha Local: '+fecha_local+'<br>Hora Local: '+hora_local+'<br>latitud: '+latitud+'<br>longitud: '+longitud+'<br>Profundidad:'+profundidad+'<br>Magnitud:'+magnitud)
+          .openPopup()
+	  .addTo(markers_febrero);
+	break;
+
+	case 3:
+          L.marker([latitud,longitud],{icon:icon})
+          .bindPopup('Fecha Local: '+fecha_local+'<br>Hora Local: '+hora_local+'<br>latitud: '+latitud+'<br>longitud: '+longitud+'<br>Profundidad:'+profundidad+'<br>Magnitud:'+magnitud)
+          .openPopup()
+	  .addTo(markers_marzo);
+	break;
+
+	case 4:
+          L.marker([latitud,longitud],{icon:icon})
+          .bindPopup('Fecha Local: '+fecha_local+'<br>Hora Local: '+hora_local+'<br>latitud: '+latitud+'<br>longitud: '+longitud+'<br>Profundidad:'+profundidad+'<br>Magnitud:'+magnitud)
+          .openPopup()
+	  .addTo(markers_abril);
+	break;
+
+	case 5:
+          L.marker([latitud,longitud],{icon:icon})
+          .bindPopup('Fecha Local: '+fecha_local+'<br>Hora Local: '+hora_local+'<br>latitud: '+latitud+'<br>longitud: '+longitud+'<br>Profundidad:'+profundidad+'<br>Magnitud:'+magnitud)
+          .openPopup()
+	  .addTo(markers_mayo);
+	break;
+
+	case 6:
+          L.marker([latitud,longitud],{icon:icon})
+          .bindPopup('Fecha Local: '+fecha_local+'<br>Hora Local: '+hora_local+'<br>latitud: '+latitud+'<br>longitud: '+longitud+'<br>Profundidad:'+profundidad+'<br>Magnitud:'+magnitud)
+          .openPopup()
+	  .addTo(markers_junio);
+	break;
+
+	case 7:
+          L.marker([latitud,longitud],{icon:icon})
+          .bindPopup('Fecha Local: '+fecha_local+'<br>Hora Local: '+hora_local+'<br>latitud: '+latitud+'<br>longitud: '+longitud+'<br>Profundidad:'+profundidad+'<br>Magnitud:'+magnitud)
+          .openPopup()
+	  .addTo(markers_julio);
+	break;
+
+	case 8:
+          L.marker([latitud,longitud],{icon:icon})
+          .bindPopup('Fecha Local: '+fecha_local+'<br>Hora Local: '+hora_local+'<br>latitud: '+latitud+'<br>longitud: '+longitud+'<br>Profundidad:'+profundidad+'<br>Magnitud:'+magnitud)
+          .openPopup()
+	  .addTo(markers_agosto);
+	break;
+
+	case 9:
+          L.marker([latitud,longitud],{icon:icon})
+          .bindPopup('Fecha Local: '+fecha_local+'<br>Hora Local: '+hora_local+'<br>latitud: '+latitud+'<br>longitud: '+longitud+'<br>Profundidad:'+profundidad+'<br>Magnitud:'+magnitud)
+          .openPopup()
+	  .addTo(markers_setiembre);
+	break;
+
+	case 10:
+          L.marker([latitud,longitud],{icon:icon})
+          .bindPopup('Fecha Local: '+fecha_local+'<br>Hora Local: '+hora_local+'<br>latitud: '+latitud+'<br>longitud: '+longitud+'<br>Profundidad:'+profundidad+'<br>Magnitud:'+magnitud)
+          .openPopup()
+	  .addTo(markers_octubre);
+	break;
+
+	case 11:
+          L.marker([latitud,longitud],{icon:icon})
+          .bindPopup('Fecha Local: '+fecha_local+'<br>Hora Local: '+hora_local+'<br>latitud: '+latitud+'<br>longitud: '+longitud+'<br>Profundidad:'+profundidad+'<br>Magnitud:'+magnitud)
+          .openPopup()
+	  .addTo(markers_noviembre);
+	break;
+	case 12:
+          L.marker([latitud,longitud],{icon:icon})
+          .bindPopup('Fecha Local: '+fecha_local+'<br>Hora Local: '+hora_local+'<br>latitud: '+latitud+'<br>longitud: '+longitud+'<br>Profundidad:'+profundidad+'<br>Magnitud:'+magnitud)
+          .openPopup()
+	  .addTo(markers_diciembre);
+	break;
+	}
+    }

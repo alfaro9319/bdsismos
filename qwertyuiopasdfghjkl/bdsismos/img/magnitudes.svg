@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="magnitudes.svg">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="-9.5 : 573.21211 : 1"
+       inkscape:vp_y="0 : 26.664126 : 0"
+       inkscape:vp_z="770.59448 : 624.71211 : 1"
+       inkscape:persp3d-origin="398.54724 : 620.03539 : 1"
+       id="perspective5570" />
+    <linearGradient
+       id="linearGradient3956"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3958" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3956"
+       id="linearGradient3960"
+       x1="-7.696"
+       y1="376.83418"
+       x2="42.912688"
+       y2="376.83418"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3956"
+       id="linearGradient5454"
+       gradientUnits="userSpaceOnUse"
+       x1="-7.696"
+       y1="376.83418"
+       x2="42.912688"
+       y2="376.83418" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="1"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.45"
+     inkscape:cx="407.82717"
+     inkscape:cy="717.53751"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1266"
+     inkscape:window-height="811"
+     inkscape:window-x="140"
+     inkscape:window-y="30"
+     inkscape:window-maximized="0">
+    <sodipodi:guide
+       orientation="0,1"
+       position="140,670"
+       id="guide2987" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="200,878.5"
+       id="guide18698" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="61.5,866"
+       id="guide18700" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="178.5,897"
+       id="guide18744" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="300.5,890"
+       id="guide18746" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="142,860"
+       id="guide18748" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="35.5,830"
+       id="guide18750" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="61.5,800"
+       id="guide18754" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="390.21018,600"
+       id="guide3074" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#666666;fill-opacity:0.58823529;stroke:#f20000;stroke-width:0.64108753;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect5589"
+       width="402.92728"
+       height="396.47745"
+       x="8.4401035"
+       y="7.5393929" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:0.31250000000000000;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path2985"
+       sodipodi:cx="95.714287"
+       sodipodi:cy="383.07648"
+       sodipodi:rx="27.142857"
+       sodipodi:ry="22.142857"
+       d="m 122.85714,383.07648 a 27.142857,22.142857 0 1 1 -54.28571,0 27.142857,22.142857 0 1 1 54.28571,0 z"
+       transform="matrix(0.21663436,0,0,0.2655518,75.264997,274.63553)"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/magnitudes.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:0.31250000000000000;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path2985-1"
+       sodipodi:cx="95.714287"
+       sodipodi:cy="383.07648"
+       sodipodi:rx="27.142857"
+       sodipodi:ry="22.142857"
+       d="m 122.85714,383.07648 a 27.142857,22.142857 0 1 1 -54.28571,0 27.142857,22.142857 0 1 1 54.28571,0 z"
+       transform="matrix(0.28884581,0,0,0.35406906,110.35333,238.72665)"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/magnitudes.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:0.31250000000000000;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path2985-1-8"
+       sodipodi:cx="95.714287"
+       sodipodi:cy="383.07648"
+       sodipodi:rx="27.142857"
+       sodipodi:ry="22.142857"
+       d="m 122.85714,383.07648 a 27.142857,22.142857 0 1 1 -54.28571,0 27.142857,22.142857 0 1 1 54.28571,0 z"
+       transform="matrix(0.36105727,0,0,0.44258633,149.44166,202.81777)"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/magnitudes.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       x="104"
+       y="379.36218"
+       id="text3799"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/magnitudes.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3801"
+         x="104"
+         y="379.36218"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;fill:#ffffff;fill-opacity:1">&gt;=3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       x="147.14548"
+       y="379.83218"
+       id="text3799-4"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/magnitudes.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3801-2"
+         x="147.14548"
+         y="379.83218"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;fill:#ffffff;fill-opacity:1">&gt;=4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       x="195.48047"
+       y="379.32718"
+       id="text3799-4-6"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/magnitudes.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3801-2-0"
+         x="195.48047"
+         y="379.32718"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;fill:#ffffff;fill-opacity:1">&gt;=5</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:0.31250000000000000;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path2985-1-8-5"
+       sodipodi:cx="95.714287"
+       sodipodi:cy="383.07648"
+       sodipodi:rx="27.142857"
+       sodipodi:ry="22.142857"
+       d="m 122.85714,383.07648 a 27.142857,22.142857 0 1 1 -54.28571,0 27.142857,22.142857 0 1 1 54.28571,0 z"
+       transform="matrix(0.43326873,0,0,0.5311036,192.52999,166.90889)"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/magnitudes.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       x="247.63547"
+       y="379.2522"
+       id="text3799-4-6-7"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/magnitudes.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3801-2-0-5"
+         x="247.63547"
+         y="379.2522"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;fill:#ffffff;fill-opacity:1">&gt;=6</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:0.31250000000000000;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path2985-1-8-5-3"
+       sodipodi:cx="95.714287"
+       sodipodi:cy="383.07648"
+       sodipodi:rx="27.142857"
+       sodipodi:ry="22.142857"
+       d="m 122.85714,383.07648 a 27.142857,22.142857 0 1 1 -54.28571,0 27.142857,22.142857 0 1 1 54.28571,0 z"
+       transform="matrix(0.50548018,0,0,0.61962086,239.61832,131.50001)"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/magnitudes.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       x="301.63547"
+       y="379.7522"
+       id="text3799-4-6-7-2"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/magnitudes.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3801-2-0-5-9"
+         x="301.63547"
+         y="379.7522"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;fill:#ffffff;fill-opacity:1">&gt;=7</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:0.31250000000000000;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path2985-1-8-5-3-1"
+       sodipodi:cx="95.714287"
+       sodipodi:cy="383.07648"
+       sodipodi:rx="27.142857"
+       sodipodi:ry="22.142857"
+       d="m 122.85714,383.07648 a 27.142857,22.142857 0 1 1 -54.28571,0 27.142857,22.142857 0 1 1 54.28571,0 z"
+       transform="matrix(0.5415859,0,0,0.6638795,291.1625,113.04557)"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/magnitudes.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       x="359.63547"
+       y="379.2522"
+       id="text3799-4-6-7-2-2"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/magnitudes.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3801-2-0-5-9-1"
+         x="359.63547"
+         y="379.2522"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;fill:#ffffff;fill-opacity:1">&gt;=8</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold"
+       x="27.5"
+       y="380.36218"
+       id="text3952"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/magnitudes.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3954"
+         x="27.5"
+         y="380.36218"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold">Magnitud :</tspan></text>
+    <g
+       id="g5456">
+      <g
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.09090899;fill:url(#linearGradient3960);fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="text5458" />
+      <g
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.09090899;fill:url(#linearGradient3960);fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="text5463" />
+      <g
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.09090899;fill:url(#linearGradient3960);fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="text5468" />
+      <g
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.09090899;fill:url(#linearGradient3960);fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="text5473" />
+      <g
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.09090899;fill:url(#linearGradient3960);fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="text5478" />
+      <g
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.09090899;fill:url(#linearGradient3960);fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="text5483" />
+      <g
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.09090899;fill:url(#linearGradient3960);fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="text5488" />
+      <g
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.09090899;fill:url(#linearGradient3960);fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="text5493" />
+      <g
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.09090899;fill:url(#linearGradient3960);fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="text5498" />
+      <g
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.09090899;fill:url(#linearGradient3960);fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="text5503" />
+      <g
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.09090899;fill:url(#linearGradient3960);fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="text5508" />
+    </g>
+    <g
+       id="g5513">
+      <g
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.09090899;fill:url(#linearGradient3960);fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="text5515" />
+      <g
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.09090899;fill:url(#linearGradient3960);fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="text5520" />
+      <g
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.09090899;fill:url(#linearGradient3960);fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="text5525" />
+      <g
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.09090899;fill:url(#linearGradient3960);fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="text5530" />
+      <g
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.09090899;fill:url(#linearGradient3960);fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="text5535" />
+      <g
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.09090899;fill:url(#linearGradient3960);fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="text5540" />
+      <g
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.09090899;fill:url(#linearGradient3960);fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="text5545" />
+      <g
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.09090899;fill:url(#linearGradient3960);fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="text5550" />
+      <g
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.09090899;fill:url(#linearGradient3960);fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="text5555" />
+      <g
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.09090899;fill:url(#linearGradient3960);fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         id="text5560" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold"
+       x="62.551033"
+       y="251.3902"
+       id="text3952-8"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/profundidades.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3954-5"
+         x="62.551033"
+         y="251.3902"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold">Último sismo</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#afffff;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold"
+       x="83.204086"
+       y="136.5322"
+       id="text3952-8-6"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/profundidades.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3954-5-5"
+         x="83.204086"
+         y="136.5322"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold">Profundidades (km)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold"
+       x="62.214157"
+       y="159.95018"
+       id="text3952-8-6-9"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/profundidades.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3954-5-5-7"
+         x="62.214157"
+         y="159.95018"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold">Superficiales (0 - 60)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold"
+       x="61.5"
+       y="190.36218"
+       id="text3952-8-6-9-0"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/profundidades.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3954-5-5-7-6"
+         x="61.5"
+         y="190.36218"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold">Intermedio (61 - 300)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold"
+       x="61.5"
+       y="218.95018"
+       id="text3952-8-6-9-0-8"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/profundidades.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3954-5-5-7-6-8"
+         x="61.5"
+         y="218.95018"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold">Profundos  ( &gt; 300)</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#ff0000;fill-opacity:0.58823532000000001;fill-rule:evenodd;stroke:#000000;stroke-width:1.0006287;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path2985-1-6"
+       sodipodi:cx="95.714287"
+       sodipodi:cy="383.07648"
+       sodipodi:rx="27.142857"
+       sodipodi:ry="22.142857"
+       d="m 122.85714,383.07648 a 27.142857,22.142857 0 1 1 -54.28571,0 27.142857,22.142857 0 1 1 54.28571,0 z"
+       transform="matrix(0.28884581,0,0,0.35406906,164.85333,18.726655)"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/profundidades.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#00ff00;fill-opacity:0.58823529;fill-rule:evenodd;stroke:#000000;stroke-width:1.00062871;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path2985-1-6-4"
+       sodipodi:cx="95.714287"
+       sodipodi:cy="383.07648"
+       sodipodi:rx="27.142857"
+       sodipodi:ry="22.142857"
+       d="m 122.85714,383.07648 a 27.142857,22.142857 0 1 1 -54.28571,0 27.142857,22.142857 0 1 1 54.28571,0 z"
+       transform="matrix(0.28884581,0,0,0.35406906,164.85343,48.726554)"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/profundidades.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#0000ff;fill-opacity:0.58823529;fill-rule:evenodd;stroke:#000000;stroke-width:1.00062871;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path2985-1-6-4-9"
+       sodipodi:cx="95.714287"
+       sodipodi:cy="383.07648"
+       sodipodi:rx="27.142857"
+       sodipodi:ry="22.142857"
+       d="m 122.85714,383.07648 a 27.142857,22.142857 0 1 1 -54.28571,0 27.142857,22.142857 0 1 1 54.28571,0 z"
+       transform="matrix(0.28884581,0,0,0.35406906,164.85343,78.726554)"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/profundidades.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffff00;fill-opacity:0.58823529;fill-rule:evenodd;stroke:#000000;stroke-width:1.00062871;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path2985-1-6-4-9-8"
+       sodipodi:cx="95.714287"
+       sodipodi:cy="383.07648"
+       sodipodi:rx="27.142857"
+       sodipodi:ry="22.142857"
+       d="m 122.85714,383.07648 a 27.142857,22.142857 0 1 1 -54.28571,0 27.142857,22.142857 0 1 1 54.28571,0 z"
+       transform="matrix(0.28884581,0,0,0.35406906,164.85343,108.72655)"
+       inkscape:export-filename="/data/paginasweb/historialsismos/img/profundidades.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold"
+       x="62.488125"
+       y="450.19418"
+       id="text3952-8-6-4"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/bdsismos/img/profundidades-linea.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3954-5-5-3"
+         x="62.488125"
+         y="450.19418"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold">Profundidades :</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold"
+       x="178.46635"
+       y="450.14218"
+       id="text3952-8-6-9-3"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/bdsismos/img/profundidades-linea.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3954-5-5-7-4"
+         x="178.46635"
+         y="450.14218"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold">Superficiales (0 - 60 km)</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00062870999999998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;opacity:1"
+       id="path2985-1-6-0"
+       sodipodi:cx="95.714287"
+       sodipodi:cy="383.07648"
+       sodipodi:rx="27.142857"
+       sodipodi:ry="22.142857"
+       d="m 122.85714,383.07648 a 27.142857,22.142857 0 1 1 -54.28571,0 27.142857,22.142857 0 1 1 54.28571,0 z"
+       transform="matrix(0.28884581,0,0,0.35406906,299.10552,309.44955)"
+       inkscape:export-filename="/data/paginasweb/bdsismos/img/profundidades-linea.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#00ff00;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00062870999999998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path2985-1-6-4-1"
+       sodipodi:cx="95.714287"
+       sodipodi:cy="383.07648"
+       sodipodi:rx="27.142857"
+       sodipodi:ry="22.142857"
+       d="m 122.85714,383.07648 a 27.142857,22.142857 0 1 1 -54.28571,0 27.142857,22.142857 0 1 1 54.28571,0 z"
+       transform="matrix(0.28884581,0,0,0.35406906,475.12441,308.67846)"
+       inkscape:export-filename="/data/paginasweb/bdsismos/img/profundidades-linea.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold"
+       x="352.37686"
+       y="450.14218"
+       id="text3952-8-6-9-0-5"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/bdsismos/img/profundidades-linea.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3954-5-5-7-6-6"
+         x="352.37686"
+         y="450.14218"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold">Intermedio (61 - 300 km)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold"
+       x="525.80304"
+       y="450.14218"
+       id="text3952-8-6-9-0-8-2"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/bdsismos/img/profundidades-linea.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3954-5-5-7-6-8-2"
+         x="525.80304"
+         y="450.14218"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold">Profundos  ( &gt; 300)</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#0000ff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00062870999999998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path2985-1-6-4-9-7"
+       sodipodi:cx="95.714287"
+       sodipodi:cy="383.07648"
+       sodipodi:rx="27.142857"
+       sodipodi:ry="22.142857"
+       d="m 122.85714,383.07648 a 27.142857,22.142857 0 1 1 -54.28571,0 27.142857,22.142857 0 1 1 54.28571,0 z"
+       transform="matrix(0.28884581,0,0,0.35406906,617.15646,308.48569)"
+       inkscape:export-filename="/data/paginasweb/bdsismos/img/profundidades-linea.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:8.33857234;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path2985-8"
+       sodipodi:cx="95.714287"
+       sodipodi:cy="383.07648"
+       sodipodi:rx="27.142857"
+       sodipodi:ry="22.142857"
+       d="m 122.85714,383.07648 a 27.142857,22.142857 0 1 1 -54.28571,0 27.142857,22.142857 0 1 1 54.28571,0 z"
+       transform="matrix(0.21663436,0,0,0.2655518,262.37143,404.90277)"
+       inkscape:export-filename="/data/paginasweb/bdsismos/img/magnitudes-linea.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:0.31250000000000000;fill-rule:evenodd;stroke:#000000;stroke-width:6.25392935;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path2985-1-0"
+       sodipodi:cx="95.714287"
+       sodipodi:cy="383.07648"
+       sodipodi:rx="27.142857"
+       sodipodi:ry="22.142857"
+       d="m 122.85714,383.07648 a 27.142857,22.142857 0 1 1 -54.28571,0 27.142857,22.142857 0 1 1 54.28571,0 z"
+       transform="matrix(0.28884581,0,0,0.35406906,297.45977,368.99389)"
+       inkscape:export-filename="/data/paginasweb/bdsismos/img/magnitudes-linea.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:0.31250000000000000;fill-rule:evenodd;stroke:#000000;stroke-width:5.0031434;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path2985-1-8-3"
+       sodipodi:cx="95.714287"
+       sodipodi:cy="383.07648"
+       sodipodi:rx="27.142857"
+       sodipodi:ry="22.142857"
+       d="m 122.85714,383.07648 a 27.142857,22.142857 0 1 1 -54.28571,0 27.142857,22.142857 0 1 1 54.28571,0 z"
+       transform="matrix(0.36105727,0,0,0.44258633,336.5481,333.08501)"
+       inkscape:export-filename="/data/paginasweb/bdsismos/img/magnitudes-linea.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold"
+       x="291.10645"
+       y="509.62939"
+       id="text3799-9"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/bdsismos/img/magnitudes-linea.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3801-6"
+         x="291.10645"
+         y="509.62939"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold">&gt;=3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold"
+       x="334.25192"
+       y="510.0994"
+       id="text3799-4-3"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/bdsismos/img/magnitudes-linea.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3801-2-8"
+         x="334.25192"
+         y="510.0994"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold">&gt;=4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold"
+       x="382.58691"
+       y="509.59439"
+       id="text3799-4-6-3"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/bdsismos/img/magnitudes-linea.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3801-2-0-8"
+         x="382.58691"
+         y="509.59439"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold">&gt;=5</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:0.31250000000000000;fill-rule:evenodd;stroke:#000000;stroke-width:4.16928612;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path2985-1-8-5-6"
+       sodipodi:cx="95.714287"
+       sodipodi:cy="383.07648"
+       sodipodi:rx="27.142857"
+       sodipodi:ry="22.142857"
+       d="m 122.85714,383.07648 a 27.142857,22.142857 0 1 1 -54.28571,0 27.142857,22.142857 0 1 1 54.28571,0 z"
+       transform="matrix(0.43326873,0,0,0.5311036,379.63643,297.17613)"
+       inkscape:export-filename="/data/paginasweb/bdsismos/img/magnitudes-linea.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold"
+       x="434.74191"
+       y="509.51941"
+       id="text3799-4-6-7-4"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/bdsismos/img/magnitudes-linea.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3801-2-0-5-90"
+         x="434.74191"
+         y="509.51941"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold">&gt;=6</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:0.31250000000000000;fill-rule:evenodd;stroke:#000000;stroke-width:3.57367385;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path2985-1-8-5-3-2"
+       sodipodi:cx="95.714287"
+       sodipodi:cy="383.07648"
+       sodipodi:rx="27.142857"
+       sodipodi:ry="22.142857"
+       d="m 122.85714,383.07648 a 27.142857,22.142857 0 1 1 -54.28571,0 27.142857,22.142857 0 1 1 54.28571,0 z"
+       transform="matrix(0.50548018,0,0,0.61962086,426.72476,261.76725)"
+       inkscape:export-filename="/data/paginasweb/bdsismos/img/magnitudes-linea.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold"
+       x="488.74191"
+       y="510.01941"
+       id="text3799-4-6-7-2-4"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/bdsismos/img/magnitudes-linea.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3801-2-0-5-9-17"
+         x="488.74191"
+         y="510.01941"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold">&gt;=7</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:0.31250000000000000;fill-rule:evenodd;stroke:#000000;stroke-width:3.33542894;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:5.4000001;stroke-dasharray:none;stroke-dashoffset:0;marker-end:none"
+       id="path2985-1-8-5-3-1-1"
+       sodipodi:cx="95.714287"
+       sodipodi:cy="383.07648"
+       sodipodi:rx="27.142857"
+       sodipodi:ry="22.142857"
+       d="m 122.85714,383.07648 a 27.142857,22.142857 0 1 1 -54.28571,0 27.142857,22.142857 0 1 1 54.28571,0 z"
+       transform="matrix(0.5415859,0,0,0.6638795,478.26894,243.31281)"
+       inkscape:export-filename="/data/paginasweb/bdsismos/img/magnitudes-linea.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold"
+       x="546.74188"
+       y="509.51941"
+       id="text3799-4-6-7-2-2-4"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/bdsismos/img/magnitudes-linea.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3801-2-0-5-9-1-9"
+         x="546.74188"
+         y="509.51941"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold">&gt;=8</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold"
+       x="214.60645"
+       y="510.62939"
+       id="text3952-7"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/data/paginasweb/bdsismos/img/magnitudes-linea.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3954-53"
+         x="214.60645"
+         y="510.62939"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Bold">Magnitud :</tspan></text>
+  </g>
+</svg>

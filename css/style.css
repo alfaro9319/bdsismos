@@ -1,0 +1,90 @@
+@charset "utf-8";
+body{text-align:center;}
+.cabecera{height:300px; background-image:url(../img/001c.jpg);background-repeat:repeat-x;}
+.cabecera1{height:120px; background-image:url(../img/001c.jpg);background-repeat:repeat-x;}
+
+.contenedor-pie {
+    background-image: url("../img/007.jpg");
+    background-repeat: repeat-x;
+    color: #FFFFFF;
+    height: 70px;
+	text-align: center;
+}
+
+.link-blanco {
+    color: #FFFFFF; text-decoration: none; font-size:18px; font-weight:bold;
+    
+}
+
+a.mostaza {
+    color: #BD852D; text-decoration: none;
+}
+
+
+a.imprimir {
+    color: #BD852D; text-decoration: none; 
+}
+
+a:hover {
+    color: #BD852D; text-decoration: underline;
+}
+
+
+
+.txt-blanco-30{
+	color:#FFFFFF; font-size:30px; font-weight:bold; text-align:left; padding-left:10px;	
+}
+
+.txt-blanco-16{
+	color:#FFFFFF; font-size:16px; font-weight:bold; text-align:left; padding-left:10px;	
+}
+
+.caja-login {
+    background-color: #FFFFFF; border: 1px solid #BBBBBB; width: 90px;
+    border: 1px solid #CD840F;
+}
+
+.banner-left {
+	text-align: left; padding-left: 10px;
+}
+
+.banner-right {
+	text-align: right; padding-right: 10px;
+}
+
+.caja-area {
+    background-color: #FFFFFF;
+    border: 1px solid #CD840F;
+}
+.caja-valor {
+    background-color: #FFFFFF;
+    border: 1px solid #CD840F;
+    width: 50px;
+}
+.caja-unidad {
+    background-color: #FFFFFF;
+    border: 1px solid #CD840F;
+    width: 35px;
+}
+
+.txt-azul{color:#0d648c; font-weight:bold;}
+.txt-rojo{color:#ff0000; font-weight:bold;}
+.txt-mostaza{color:#bd852d; font-weight:bold;}
+
+.tablacebra{color:#FFF;font-family:Arial, Helvetica, sans-serif; }
+tr.cab td{text-align:center; background-color:#000; font-size:11px;	color:#FFFFFF; font-weight:bold; padding:2px; border: 1px solid #000;}
+tr.cebra td{background-color:#FFF; padding:2px; font-family: Arial; font-size: 11px; color: #000; border: 1px solid #000; border-style: dotted; border-width: 1px;}
+
+
+.tablalateral{color:#000;font-family:Arial, Helvetica, sans-serif; }
+tr.mes td{background-color:#F5F5F5; padding-left:10px; font-family: Arial; font-size: 11px; font-weight:bold; color: #0D648C; }
+
+.check-mes {
+    background-color: #FFFFFF;
+    border: 1px solid #CD840F;
+}
+
+.hover{
+	cursor:pointer;
+	color:#0099FF;
+}

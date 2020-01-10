@@ -1,0 +1,96 @@
+@CHARSET "UTF-8";
+BODY {
+background-attachment: scroll;
+background-repeat: no-repeat;
+background-color: #FFFFFF;
+text-align: center;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px; color:#4f4b4a;
+ 
+}
+
+#contenedor-general {
+	background-color: #FFFFFF;
+    background-repeat: repeat-y;
+    height: auto !important;
+    min-height: 450px;
+	width: 1200px;
+	margin:50px auto;
+	text-align:center;
+}
+
+#contenedor-borde {
+	background-color: #FFFFFF;
+    background-image: url("../img/006.gif");
+    background-repeat: repeat-y;
+    height: auto !important;
+	width: 1200px;
+Parámetros Hipocentrales
+Fecha Local	15/08/2012
+Hora Local	21:00:22
+Latitud	-12.25
+Longitud	-78.37
+Profundidad	25 Km
+Epicentro	Mar
+Referencia	137 Km al O de Callao
+Magnitud	8.4 Mw
+Intensidad	VIII Costa del Perú (SIMULACRO)
+Fecha GMT	16/08/2012
+Hora GMT	02:00:22
+Fecha y hora actual
+16/08/2012    15:21:27
+	
+	margin:auto;
+}
+
+#superior{
+	background-color: #FFFFFF;
+    height: auto !important;
+	width: 1200px;
+}
+
+.campo-login{float:left; width:80px; font-weight:bold; color:#0d648c;padding-top:2px;}
+.caja-login{width:90px; border:1px solid #cd840f; background-color:#FFF; }
+.caja-valor{width:50px; border:1px solid #cd840f; background-color:#FFF; }
+.caja-unidad{width:35px; border:1px solid #cd840f; background-color:#FFF; }
+.caja-area{border:1px solid #cd840f; background-color:#FFF; }
+.contenedor-caja-login{float:left; width:90px; margin-bottom:5px;}
+
+.contenedor-centro{width:100%; min-height:300px; height:auto !important; height:300px;}
+.contenedor-simple{width:960px;}
+.contenedor-chico{width:610px;}
+.cabecera{background-image:url(../img/001b.jpg);background-repeat:repeat-x; height:160px; background-color:#cd840f;}
+.contenedor-logotipo{width:960px;text-align:left; height:100px; }
+.contenedor-menu{width:940px;text-align:left;background-image:url(../img/004.gif);background-repeat:repeat-x;padding-top:6px;height:24px;font-weight:bold;color:#FFF;}
+.menu { width: 940px; background-image:url(../img/004.gif); background-repeat:repeat-x;padding-top:1px; height:29px;font-weight:bold;color:#FFF; float:left; z-index:3; }
+.menu-chico { width: 590px; background-image:url(../img/004.gif); background-repeat:repeat-x;padding-top:1px; height:29px;font-weight:bold;color:#FFF; float:left; z-index:3; }
+.menu img { border:none; padding-left:5px;}
+.campo-resultado{font-size:14px; color:#4f4b4a; float:left; width:120px; font-weight:bold; padding-top:2px;}
+.valor-resultado{font-size:14px; color:#4f4b4a; float:left; width:200px; margin-bottom:5px;}
+.columna-izquierda{float:left; width:180px;; padding:10px 20px 20px 20px; text-align:left;}
+.columna-izquierda-editar{float:left; width:200px;; padding:10px 20px 20px 20px; text-align:left;}
+.columna-derecha{ width:600px; height:400px; padding:10px 10px 20px 200px; text-align:left; *margin-left:20px; *padding-left:0px;}
+.columna-derecha-derecha{float:right; width:100px; height:300px; padding:10px 0px 0px 0px; text-align:left;}
+.columna-derecha-reporte{float:left; width:600px; height:500px; padding:5px 20px 5px 20px; text-align:left;}
+.columna-derecha-editar{float:left; width:720px; height:750px; padding:10px 0px 20px 0px; text-align:left;  background-color:#EEEEEE;}
+.tablacebra{color:#FFF;font-family:Arial, Helvetica, sans-serif; border: 1px solid #7d7a75; border-style: dotted; border-width: 1px; width:100%;}
+tr.cab td{text-align:center; background-color:#000; font-size:11px;	color:#FFFFFF; font-weight:bold; padding:6px; border: 1px solid #000;}
+tr.cebra td{background-color:#FFF; padding:6px; font-family: Arial; font-size: 11px; color: #000; border: 1px solid #000; border-style: dotted; border-width: 1px; }
+
+.txt-azul{color:#0d648c; font-weight:bold;}
+.txt-rojo{color:#ff0000; font-weight:bold;}
+.txt-mostaza{color:#bd852d; font-weight:bold;}
+.contenedor-pie{background-image:url(../img/007b.jpg); background-repeat:repeat-x; height:30px; color:#FFF; width:960px; padding-top:10px;}
+.contenedor-pie-chico{background-image:url(../img/007b.jpg); background-repeat:repeat-x; height:30px; color:#FFF; width:610px; padding-top:10px;}
+#upload_button:hover{
+	cursor:pointer;
+}
+
+a{
+    color:red;
+    text-decoration: none;
+}
+a:hover {
+    color: #CD8310;
+    text-decoration: none;
+}

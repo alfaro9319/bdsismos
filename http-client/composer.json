@@ -1,0 +1,14 @@
+{
+    "name": "alex/http-client",
+    "description": "HttpClient for vanilla PHP",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Alex Naupay",
+            "email": "alexnaupay@igp.gob.pe"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "~5.0"
+    }
+}
